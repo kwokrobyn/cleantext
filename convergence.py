@@ -71,13 +71,14 @@ if __name__ == '__main__':
 			for key in entry: 
 				promscore = 0 
 				prevscore = 0 
-				for num in range(25):
+				for num in range(len(PromotionFocus)):
 					promscore += entry[key].lower().count(PromotionFocus[num])
+				for num in range(len(PreventionFocus)):
 					prevscore += entry[key].lower().count(PreventionFocus[num])
 			if key not in scoredict: 
-				scoredict[key] = [(promscore, prevscore)]
+				scoredict[key] = [(promscore/22.0, prevscore/25.0)]
 			else: 
-				scoredict[key].append((promscore,prevscore))
+				scoredict[key].append((promscore/22.0,prevscore/25.0))
 
 		print (scoredict)
 
