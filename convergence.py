@@ -64,7 +64,22 @@ if __name__ == '__main__':
 	for filename in os.listdir(input_path):
 		if filename.endswith('.doc'):
 			sectionLists = createSectionDicts(filename[:filename.find('.doc')], convergence_path)
+		PromotionFocus = ["accomplish", "achiev", "aspire", "aspiration", "advance", "attain", "desire", "earn", "gain", "hope", "hoping", "ideal", "improve", "momentum", "obtain", "optimist", "promote", "promoti", "speed", "swift", "toward", "wish"]
+		PreventionFocus = ["accura", "afraid", "anxi", "avoid", "careful", "conservative", "defen", "duty", "escape", "escaping", "evade", "fail", "fear", "loss", "obligation", "ought", "pain", "prevent", "protect", "responsible", "risk", "safe", "secur", "threat", "vigilan"]
+		scoredict = {}
+		for entry in SectionLists: 
+			for key in entry: 
+				promscore = 0 
+				prevscore = 0 
+				for num in range(25):
+					promscore += entry[key].lower().count(PromotionFocus[num])
+					prevscore += entry[key].lower().count(PreventionFocus[num])
+			if key not in scoredict: 
+				scoredict[key] = [(promscore, prevscore)]
+			else: 
+				scoredict[key].append((promscore,prevscore))
 
+		print (scoredict)
 
 	# testing code 
 	#filename = 'A004_Clean'
