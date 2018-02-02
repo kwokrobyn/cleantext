@@ -32,8 +32,8 @@ def findSpeakers(stream):
 				speakers.append(tmp[0] + ":")
 				speakerNames.append(tmp[1])
 
-		print speakers
-		print speakerNames 
+		#print speakers
+		#print speakerNames 
 
 	return (speakers, legendText)
 

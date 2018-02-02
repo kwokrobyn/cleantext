@@ -1,0 +1,28 @@
+[ 
+	{
+  		'speaker': 'PT',					# one dict for each unique speaker score combo 
+  		'wordset': 'Promotion',
+  		'fileList': ['AOO3_Clean', 'A004_Noise', 'A024_Clean',...],   # dictate order scores are recorded 
+  		'parts': 3,
+  		'scores': [ [0.3, 0.4, 0.1, 0.2, ...],                   # score[0] represents part 1 scores
+  			 	    [0.2, 0.1, 0.1, 0.5, ...],						    # score[1] represents part 2 scores etc.. 
+  			        [0.1, 0.1, 0.14, 0.24, ...] ]
+    }, 
+
+  	{
+  		'speaker': 'PT',
+   		'wordset': 'Prevention',
+   		'fileList':,
+   		'parts':,
+   		'scores':},
+
+    {
+   		'speaker': 'MD',
+    	'wordset': 'Promotion', ...
+    }, 
+
+    {
+    	'speaker': 'MD',
+    	'wordset': 'Prevention', ...
+    }  
+]
